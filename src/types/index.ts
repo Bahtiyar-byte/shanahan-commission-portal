@@ -1,4 +1,42 @@
-export type UserRole = 'admin' | 'salesperson';
+export type UserRole = 'owner' | 'admin' | 'manager' | 'salesperson' | 'csr' | 'accounting';
+
+// Granular Permission Definitions
+export type PermissionScope = 'none' | 'own' | 'team' | 'all';
+
+export interface UserPermissions {
+  // Commission Visibility
+  viewCommissions: PermissionScope;           // See commission amounts
+  viewCommissionRates: boolean;               // See actual percentage rates
+  viewOthersCommissions: boolean;             // See what colleagues earn
+
+  // Load & Customer Access
+  viewLoads: PermissionScope;                 // Access to load records
+  viewCustomers: PermissionScope;             // Access to customer records
+  viewCustomerScores: boolean;                // See trust scores
+  viewSalespersonScores: boolean;             // See performance scores
+
+  // Financial Data
+  viewFinancialDetails: boolean;              // See billed/received amounts
+  viewOutstandingAmounts: boolean;            // See what's owed
+  viewPaymentHistory: boolean;                // See payment patterns
+
+  // Actions
+  canAddNotes: boolean;                       // Add notes to loads
+  canTagUsers: boolean;                       // @mention other users
+  canFlagDisputes: boolean;                   // Mark loads as disputed
+  canExportData: boolean;                     // Export to CSV/Excel
+
+  // Admin Features
+  canManageCommissionRuns: boolean;           // Create/finalize commission runs
+  canEditCommissionRates: boolean;            // Change rate configurations
+  canManageUsers: boolean;                    // Add/edit/remove users
+  canManagePermissions: boolean;              // Change user permissions
+  canViewAllReports: boolean;                 // Access all analytics
+  canConfigureSystem: boolean;                // System settings
+}
+
+// Preset permission templates
+export type PermissionPreset = 'owner' | 'admin' | 'manager' | 'salesperson' | 'csr' | 'accounting' | 'custom';
 
 export interface User {
   id: string;
@@ -6,6 +44,18 @@ export interface User {
   email: string;
   role: UserRole;
   avatar?: string;
+  permissions: UserPermissions;
+  permissionPreset: PermissionPreset;
+  isActive: boolean;
+  createdAt: string;
+  lastLogin?: string;
+}
+
+// For the user management table
+export interface ManagedUser extends User {
+  department?: string;
+  reportsTo?: string;
+  teamId?: string;
 }
 
 export type PaymentPattern = 'On Time' | 'Slow' | 'Partial Payer' | 'Problematic';

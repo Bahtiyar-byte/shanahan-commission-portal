@@ -6,6 +6,7 @@ import { SalespeopleTab } from './SalespeopleTab';
 import { CustomersTab } from './CustomersTab';
 import { CommissionRunsTab } from './CommissionRunsTab';
 import { ProfileTab } from './ProfileTab';
+import { PermissionsTab } from './PermissionsTab';
 import { SettingsTab } from './SettingsTab';
 
 interface AdminDashboardProps {
@@ -25,6 +26,8 @@ export function AdminDashboard({ onViewToggle }: AdminDashboardProps) {
         return <CustomersTab />;
       case 'commission-runs':
         return <CommissionRunsTab />;
+      case 'permissions':
+        return <PermissionsTab />;
       case 'profile':
         return <ProfileTab />;
       case 'settings':

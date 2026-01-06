@@ -4,4 +4,5 @@ export { SalespeopleTab } from './SalespeopleTab';
 export { CustomersTab } from './CustomersTab';
 export { CommissionRunsTab } from './CommissionRunsTab';
 export { ProfileTab } from './ProfileTab';
+export { PermissionsTab } from './PermissionsTab';
 export { SettingsTab } from './SettingsTab';
