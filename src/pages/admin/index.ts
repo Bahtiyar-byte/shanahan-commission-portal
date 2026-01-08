@@ -3,6 +3,8 @@ export { OverviewTab } from './OverviewTab';
 export { SalespeopleTab } from './SalespeopleTab';
 export { CustomersTab } from './CustomersTab';
 export { CommissionRunsTab } from './CommissionRunsTab';
+export { UserManagementTab } from './UserManagementTab';
+export { CommissionRatesTab } from './CommissionRatesTab';
 export { ProfileTab } from './ProfileTab';
 export { PermissionsTab } from './PermissionsTab';
 export { SettingsTab } from './SettingsTab';

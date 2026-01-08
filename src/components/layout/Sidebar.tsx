@@ -8,7 +8,8 @@ import {
   Package,
   History,
   User,
-  Shield,
+  DollarSign,
+  UserCog,
 } from 'lucide-react';
 
 interface NavItem {
@@ -28,7 +29,8 @@ const adminNavItems: NavItem[] = [
   { id: 'salespeople', label: 'By Salesperson', icon: <Users className="w-5 h-5" /> },
   { id: 'customers', label: 'By Customer', icon: <Building2 className="w-5 h-5" /> },
   { id: 'commission-runs', label: 'Commission Runs', icon: <FileText className="w-5 h-5" /> },
-  { id: 'permissions', label: 'Permissions', icon: <Shield className="w-5 h-5" /> },
+  { id: 'commission-rates', label: 'Commission Rates', icon: <DollarSign className="w-5 h-5" /> },
+  { id: 'user-management', label: 'User Management', icon: <UserCog className="w-5 h-5" /> },
   { id: 'profile', label: 'Profile', icon: <User className="w-5 h-5" /> },
   { id: 'settings', label: 'Settings', icon: <Settings className="w-5 h-5" /> },
 ];
