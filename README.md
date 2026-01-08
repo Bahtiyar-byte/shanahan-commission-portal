@@ -23,13 +23,13 @@ Traditional solutions either expose too much data or provide too little transpar
 
 The Shanahan Commission Portal provides **role-based visibility** where everyone sees exactly what they need—nothing more, nothing less:
 
-| User | What They See |
-|------|---------------|
-| **Owner (Tom)** | Everything. All commissions, all salespeople, all customers, full control. |
-| **Admin (Stephanie)** | Full visibility, can run commission cycles, but can't change system settings. |
+| User                   | What They See                                                                         |
+|------------------------|---------------------------------------------------------------------------------------|
+| **Owner (Tom)**        | Everything. All commissions, all salespeople, all customers, full control.            |
+| **Admin (Stephanie)**  | Full visibility, can run commission cycles, but can't change system settings.         |
 | **Salesperson (Mike)** | Only their own commissions, loads, and customers. Can see *why* payments are pending. |
-| **CSR** | Load and customer data for service purposes. Zero financial/commission visibility. |
-| **Accounting** | Financial data and commission runs. No user management access. |
+| **CSR**                | Load and customer data for service purposes. Zero financial/commission visibility.    |
+| **Accounting**         | Financial data and commission runs. No user management access.                        |
 
 ---
 
@@ -177,14 +177,14 @@ Same functionality as admin, scoped to personal account.
 ## Technical Architecture
 
 ### Stack
-| Layer | Technology |
-|-------|------------|
-| **Frontend** | React 18 with TypeScript |
-| **Build Tool** | Vite (fast HMR, optimized builds) |
-| **Styling** | Tailwind CSS (utility-first, consistent design) |
-| **Charts** | Recharts (composable, responsive) |
-| **Icons** | Lucide React (consistent, tree-shakeable) |
-| **State** | React useState/useEffect (simple, no Redux overhead) |
+| Layer          | Technology                                           |
+|----------------|------------------------------------------------------|
+| **Frontend**   | React 18 with TypeScript                             |
+| **Build Tool** | Vite (fast HMR, optimized builds)                    |
+| **Styling**    | Tailwind CSS (utility-first, consistent design)      |
+| **Charts**     | Recharts (composable, responsive)                    |
+| **Icons**      | Lucide React (consistent, tree-shakeable)            |
+| **State**      | React useState/useEffect (simple, no Redux overhead) |
 
 ### Project Structure
 ```
