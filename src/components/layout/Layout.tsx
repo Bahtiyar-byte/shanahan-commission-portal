@@ -32,7 +32,7 @@ export function Layout({
         <Sidebar
           activeTab={activeTab}
           onTabChange={onTabChange}
-          isAdmin={user.role === 'admin'}
+          isAdmin={isAdminView ?? (user.role === 'admin' || user.role === 'owner')}
         />
         <main className="flex-1 p-6">
           {children}
